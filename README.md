@@ -11,14 +11,4 @@ kjh, kjh
 
 another correct
 
-이렇게 바꾸면되는건가요 
-
-그렇게 바꾸면 될거 같아요
-
-라스트 커밋 ;;
-
-진짜 마지막이야
-
-....
-
-다시보세요;;; ㅇㅇㅇ
+don't speak korean
