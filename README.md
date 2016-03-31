@@ -10,3 +10,5 @@ team 6, repository, kjh, sdc, pkh, jhk
 kjh, kjh
 
 another correct
+
+이렇게 바꾸면되는건가요 
