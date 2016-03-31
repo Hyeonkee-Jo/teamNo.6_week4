@@ -12,3 +12,5 @@ kjh, kjh
 another correct
 
 이렇게 바꾸면되는건가요 
+
+그렇게 바꾸면 될거 같아요
