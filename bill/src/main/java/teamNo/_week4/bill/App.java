@@ -7,16 +7,18 @@ public class App {
 		Scanner scan = new Scanner(System.in);
 		Cost cost = new Cost();
 
-		System.out.print("사용자의 통화정보를 입력하세요 : [Gold : (g or G), Silver : (s or S)], [Addline], [Total Traffic]");
+		System.out.println("사용자의 Plan을 입력하세요 : [Gold : (g or G), Silver : (s or S)]");
 		String plan = scan.nextLine();
+		System.out.println("사용자의 Line개수를 입력하세요 : ");
 		int addline = scan.nextInt();
+		System.out.println("사용자의 총 통화량을 입력하세요 : ");
 		int traffic = scan.nextInt();
 
 		if (plan.toUpperCase().equals("G")) {
 			cost.plan = new GoldPlan();
 			cost.setNumLine(addline);
 			cost.setUsed(traffic);
-			System.out.println("User Plan : " + plan);
+			System.out.println("User Plan : GOLD");
 			System.out.println("User Number of Line : " + addline);
 			System.out.println("User Total Traffic : " + traffic);
 			System.out.printf("총 사용 요금 : %.2f", cost.calculate_total_cost());
@@ -26,7 +28,7 @@ public class App {
 			cost.plan = new SilverPlan();
 			cost.setNumLine(addline);
 			cost.setUsed(traffic);
-			System.out.println("User Plan : " + plan);
+			System.out.println("User Plan : SILVER");
 			System.out.println("User Number of Line : " + addline);
 			System.out.println("User Total Traffic : " + traffic);
 			System.out.printf("총 사용 요금 : %.2f", cost.calculate_total_cost());
