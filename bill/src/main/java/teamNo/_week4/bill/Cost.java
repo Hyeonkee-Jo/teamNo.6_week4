@@ -25,11 +25,11 @@ public class Cost {
 		double expected_bill = 0;
 		if(plan.getGrade() == GOLD){
 			if(minutes_used >= 1000)
-				expected_bill = 0.45*(minutes_used-1000);
+				expected_bill = plan.getOverflowTrafficCost()*(minutes_used-1000);
 		}
 		else if(plan.getGrade() == SILVER){
 			if(minutes_used >= 500)
-				expected_bill = 0.54*(minutes_used-500);
+				expected_bill = plan.getOverflowTrafficCost()*(minutes_used-500);
 		}
 		
 		return expected_bill;
