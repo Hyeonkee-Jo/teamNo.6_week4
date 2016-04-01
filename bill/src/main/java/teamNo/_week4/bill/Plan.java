@@ -1,15 +1,21 @@
+package teamNo._week4.bill;
+
 public interface Plan {
 		
-	public void setBasecost(int base_cost);
+	public void setBasecost(double base_cost);
 	
-	public int getBasecost();
+	public double getBasecost();
 	
-	public void setAddLineCost(int addline_cost);
+	public void setBaseTraffic(int base_traffic);
 	
-	public int getAddLineCost();
+	public int getBaseTraffic();	
 	
-	public void setOverflowTrafficCost(int overflow_traffic_cost);
+	public void setAddLineCost(double addline_cost);
 	
-	public int getOverflowTrafficCost();
+	public double getAddLineCost();
+	
+	public void setOverflowTrafficCost(double overflow_traffic_cost);
+	
+	public double getOverflowTrafficCost();
 	
 }
