@@ -3,7 +3,8 @@ package teamNo._week4.bill;
 public class Cost {
 	
 	Plan plan;
-	static String GOLD, SILVER;
+	static String GOLD = "GOLD";
+	static STring SILVER = "SILVER";
 	int minutes_used;
 	int num;
 	

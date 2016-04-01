@@ -16,14 +16,20 @@ public class App
         
         if(plan.toUpperCase()=="GOLD")
         {
-        	cost.plan = new GoldPlan();
+           cost.plan = new GoldPlan();
+           cost.setNumLine(addline);
+           cost.setUsed(traffic);
+           
+           System.out.println("총 사용 요금 : " + cost.calculate_total_cost());
         }
         
         else if(plan.toUpperCase()=="SILVER")
         {
-        	cost.plan = new SilverPlan();
+           cost.plan = new SilverPlan();
+           cost.setNumLine(addline);
+           cost.setUsed(traffic);
+           
+           System.out.println("총 사용 요금 : " + cost.calculate_total_cost());
         }
-        
-        
     }
 }
