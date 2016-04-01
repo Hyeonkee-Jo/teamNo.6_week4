@@ -9,6 +9,8 @@ public class Cost {
 	
 	public Cost(){
 		this.calculate_overflow_traffic_cost();
+		this.calculate_Addline_Cost();
+		this.calculate_total_cost();
 	}
 	
 	public int getUsed(int userUsed){
@@ -43,19 +45,22 @@ public class Cost {
 	
 	public double calculate_Addline_Cost(){
 		int get_Number_Of_Line = getNumLine(num);
+		double addlineCost = plan.getAddLineCost();
 		if(plan.getGrade()==GOLD){
 			if (get_Number_Of_Line < 4)
-				return 14.50 * (get_Number_Of_Line-1); 
+				return addlineCost * (get_Number_Of_Line-1); 
 			else 
-				return ( 14.50 * 2 ) + ( 5 * (get_Number_Of_Line-3) );
+				return ( addlineCost * 2 ) + ( 5 * (get_Number_Of_Line-3) );
 			
 		}	
 		else if(plan.getGrade()==SILVER){
 			if(get_Number_Of_Line <4)
-				return 21.50 * (get_Number_Of_Line-1);
+				return addlineCost * (get_Number_Of_Line-1);
 			else
-				return 21.50 * 2 + ( 5 * ( get_Number_Of_Line - 3 ) );
+				return addlineCost * 2 + ( 5 * ( get_Number_Of_Line - 3 ) );
 		}
+		
+		return 0;
 	}
 	
 	
