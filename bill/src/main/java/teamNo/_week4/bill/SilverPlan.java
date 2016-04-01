@@ -24,12 +24,12 @@ public class SilverPlan implements Plan {
 		return this.base_cost;
 	}
 	
-	public void setBaseTraffic(double base_traffic)
+	public void setBaseTraffic(int base_traffic)
 	{
 		this.base_traffic = base_traffic;
 	}
 	
-	public double getBaseTraffic() {
+	public int getBaseTraffic() {
 		return this.base_traffic;
 	}
 	

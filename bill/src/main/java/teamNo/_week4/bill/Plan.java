@@ -6,9 +6,9 @@ public interface Plan {
 	
 	public double getBasecost();
 	
-	public void setBaseTraffic(double base_traffic);
+	public void setBaseTraffic(int base_traffic);
 	
-	public double getBaseTraffic();
+	public int getBaseTraffic();
 	
 	public void setAddLineCost(double addline_cost);
 	
