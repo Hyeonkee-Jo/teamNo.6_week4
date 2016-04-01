@@ -3,11 +3,11 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.your.dream</groupId>
-  <artifactId>real</artifactId>
+  <artifactId>teamNo6_week4</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>jar</packaging>
 
-  <name>real</name>
+  <name>teamNo6_week4</name>
   <url>http://maven.apache.org</url>
 
   <profiles>
