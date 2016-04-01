@@ -18,4 +18,6 @@ public interface Plan {
 	
 	public double getOverflowTrafficCost();
 	
+	public String getGrade();
+	
 }
