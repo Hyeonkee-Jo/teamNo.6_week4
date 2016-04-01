@@ -9,9 +9,9 @@ public class Cost {
 	int num;
 	
 	public Cost(){
-		calculate_overflow_traffic_cost();
+		/*calculate_overflow_traffic_cost();
 		calculate_Addline_Cost();
-		calculate_total_cost();
+		calculate_total_cost();*/
 	}
 	
 	public void setUsed(int userUsed) {
