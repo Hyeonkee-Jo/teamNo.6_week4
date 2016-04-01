@@ -5,16 +5,19 @@ public class Cost {
 	Plan plan;
 	static String GOLD, SILVER;
 	int minutes_used;
+	int num;
 	
 	public Cost(){
 		this.calculate_overflow_traffic_cost();
 	}
 	
 	public int getUsed(int userUsed){
-		return userUsed;
+		this.minutes_used = userUsed;
+		return minutes_used;
 	}
 	
 	public int getNumLine(int num){
+		this.num = num;
 		return num;
 	}
 	
@@ -48,7 +51,7 @@ public class Cost {
 			
 		}	
 		else if(plan.getGrade()==SILVER){
-			if(get_number_of_Line <4)
+			if(get_Number_Of_Line <4)
 				return 21.50 * (get_Number_Of_Line-1);
 			else
 				return 21.50 * 2 + ( 5 * ( get_Number_Of_Line - 3 ) );
