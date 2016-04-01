@@ -39,7 +39,7 @@ public class SilverPlan implements Plan {
 	
 	public double getAddLineCost()
 	{
-		return 0;
+		return this.addline_cost;
 	}
 	
 	private void setOverflowTrafficCost(double overflow_traffic_cost)
@@ -48,7 +48,7 @@ public class SilverPlan implements Plan {
 	}
 	
 	public double getOverflowTrafficCost() {
-		return 0;
+		return this.overflow_traffic_cost;
 	}
 	
 }
