@@ -13,13 +13,18 @@ public class Cost {
 		this.calculate_total_cost();
 	}
 	
-	public int getUsed(int userUsed){
+	public void setUsed(int userUsed) {
 		this.minutes_used = userUsed;
+	}
+	
+	public int getUsed(){
 		return minutes_used;
 	}
 	
-	public int getNumLine(int num){
+	public void setNumLine(int num) {
 		this.num = num;
+	}
+	public int getNumLine(){
 		return num;
 	}
 	
@@ -44,7 +49,7 @@ public class Cost {
 	}
 	
 	public double calculate_Addline_Cost(){
-		int get_Number_Of_Line = getNumLine(num);
+		int get_Number_Of_Line = getNumLine();
 		double addlineCost = plan.getAddLineCost();
 		if(plan.getGrade()==GOLD){
 			if (get_Number_Of_Line < 4)
