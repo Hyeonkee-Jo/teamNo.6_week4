@@ -4,14 +4,14 @@ public class Cost {
 	
 	Plan plan;
 	static String GOLD = "GOLD";
-	static STring SILVER = "SILVER";
+	static String SILVER = "SILVER";
 	int minutes_used;
 	int num;
 	
 	public Cost(){
-		this.calculate_overflow_traffic_cost();
-		this.calculate_Addline_Cost();
-		this.calculate_total_cost();
+		calculate_overflow_traffic_cost();
+		calculate_Addline_Cost();
+		calculate_total_cost();
 	}
 	
 	public void setUsed(int userUsed) {
@@ -31,15 +31,9 @@ public class Cost {
 	
 	public double calculate_overflow_traffic_cost(){
 		double expected_bill = 0;
-		if(plan.getGrade() == GOLD){
-			if(minutes_used >= 1000)
-				expected_bill = plan.getOverflowTrafficCost()*(minutes_used-1000);
-		}
-		else if(plan.getGrade() == SILVER){
-			if(minutes_used >= 500)
-				expected_bill = plan.getOverflowTrafficCost()*(minutes_used-500);
-		}
-		
+		if(minutes_used >= plan.getBaseTraffic())
+			expected_bill = plan.getOverflowTrafficCost()*(minutes_used-plan.getBaseTraffic());
+	
 		return expected_bill;
 	}
 	
@@ -52,23 +46,13 @@ public class Cost {
 	public double calculate_Addline_Cost(){
 		int get_Number_Of_Line = getNumLine();
 		double addlineCost = plan.getAddLineCost();
-		if(plan.getGrade()==GOLD){
-			if (get_Number_Of_Line < 4)
-				return addlineCost * (get_Number_Of_Line-1); 
-			else 
-				return ( addlineCost * 2 ) + ( 5 * (get_Number_Of_Line-3) );
-			
-		}	
-		else if(plan.getGrade()==SILVER){
-			if(get_Number_Of_Line <4)
-				return addlineCost * (get_Number_Of_Line-1);
-			else
-				return addlineCost * 2 + ( 5 * ( get_Number_Of_Line - 3 ) );
-		}
-		
-		return 0;
+		double calculate_cost = 0;
+		if (get_Number_Of_Line < 4)
+			calculate_cost = addlineCost * (get_Number_Of_Line-1); 
+		else 
+			calculate_cost = ( addlineCost * 2 ) + ( 5 * (get_Number_Of_Line-3) );
+				
+		return calculate_cost;
 	}
-	
-	
-}
 
+}
