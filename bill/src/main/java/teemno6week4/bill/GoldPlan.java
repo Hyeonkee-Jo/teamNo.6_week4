@@ -1,59 +1,59 @@
 package teemno6week4.bill;
 
 public class GoldPlan implements Plan{
-	double base_cost;
+	double basecost;
 	String grade;
-	double addline_cost;
-	double overflow_traffic_cost;
-	int base_traffic;
+	double addlinecost;
+	double overflowtrafficcost;
+	int basetraffic;
 	
 	public GoldPlan()
 	{
-		this.base_cost = 49.95;
+		this.basecost = 49.95;
 		this.grade = "Gold";
-		this.addline_cost = 14.50;
-		this.overflow_traffic_cost = 0.45;
-		this.base_traffic = 1000;
+		this.addlinecost = 14.50;
+		this.overflowtrafficcost = 0.45;
+		this.basetraffic = 1000;
 	}
 	
-	public void setBasecost(double base_cost)
+	public void setBasecost(double basecost)
 	{
-		this.base_cost = base_cost;
+		this.basecost = basecost;
 	}
 	
 	public double getBasecost()
 	{
-		return this.base_cost;
+		return this.basecost;
 	}
 	
-	public void setAddLineCost(double addline_cost)
+	public void setAddLineCost(double addlinecost)
 	{
-		this.addline_cost = addline_cost;
+		this.addlinecost = addlinecost;
 	}
 	
 	public double getAddLineCost()
 	{
-		return this.addline_cost;
+		return this.addlinecost;
 	}
 	
-	public void setOverflowTrafficCost(double overflow_traffic_cost)
+	public void setOverflowTrafficCost(double overflowtrafficcost)
 	{
-		this.overflow_traffic_cost = overflow_traffic_cost;
+		this.overflowtrafficcost = overflowtrafficcost;
 	}
 	
 	public double getOverflowTrafficCost()
 	{
-		return this.overflow_traffic_cost;
+		return this.overflowtrafficcost;
 	}
 	
-	public void setBaseTraffic(int base_traffic)
+	public void setBaseTraffic(int basetraffic)
 	{
-		this.base_traffic = base_traffic;
+		this.basetraffic = basetraffic;
 	}
 	
 	public int getBaseTraffic()
 	{
-		return this.base_traffic;
+		return this.basetraffic;
 	}
 
 	public String getGrade() {
