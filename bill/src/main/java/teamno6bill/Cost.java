@@ -1,10 +1,8 @@
-package teemno6week4.bill;
+package teamno6bill;
 
 public class Cost {
 	
 	Plan plan;
-	static String GOLD = "GOLD";
-	static String SILVER = "SILVER";
 	int traffic;
 	int num;
 	
