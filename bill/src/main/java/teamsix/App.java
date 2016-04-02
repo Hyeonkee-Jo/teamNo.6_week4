@@ -1,12 +1,16 @@
 package teamsix;
 
+import java.util.logging.*;
+
 public class App {
+	
 	private App(){
 		
 	}
 	public static void main(String[] args) {
+		Logger logger = Logger.getLogger("Bill");
 		Cost cost = new Cost("S", 300, 4);
-		System.out.println(cost.toString());
+		logger.log(Level.INFO, cost.toString());
 	}
 }
 
