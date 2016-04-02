@@ -1,4 +1,4 @@
-package team6;
+package teamsix;
 
 public interface Plan {
 		

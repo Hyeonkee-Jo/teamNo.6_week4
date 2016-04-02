@@ -1,4 +1,4 @@
-package team6;
+package teamsix;
 
 public class App {
 	public static void main(String[] args) {

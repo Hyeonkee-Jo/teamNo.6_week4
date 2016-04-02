@@ -1,4 +1,4 @@
-package team6;
+package teamsix;
 
 import junit.framework.Test;
 import junit.framework.TestCase;
