@@ -5,7 +5,8 @@ public class App {
 		
 	}
 	public static void main(String[] args) {
-		new Cost("S", 300, 4);
+		Cost cost = new Cost("S", 300, 4);
+		System.out.println(cost.toString());
 	}
 }
 

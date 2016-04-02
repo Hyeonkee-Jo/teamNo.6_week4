@@ -1,5 +1,6 @@
 package teamsix;
 
+
 public class Cost {
 	
 	Plan plan;
@@ -10,14 +11,16 @@ public class Cost {
 		
 		this.traffic = traffic;
 		this.num=num;
-		if(p.equals("S")){
-			plan = new SilverPlan();
-			System.out.println(this.calculatetotalcost()+"$");
+		if(("S").equals(p)){
+			plan = new SilverPlan();		
 		}
-		else if(p.equals("G")) {
+		else if(("G").equals(p)) {
 			plan = new GoldPlan();
-			System.out.println(this.calculatetotalcost()+"$");
 		}
+	}
+	
+	public String toString() {
+		return this.calculatetotalcost()+"$";
 	}
 	
 	public void setUsed(int userUsed) {
