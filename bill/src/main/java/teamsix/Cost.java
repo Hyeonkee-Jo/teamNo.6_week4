@@ -19,6 +19,7 @@ public class Cost {
 		}
 	}
 	
+	@Override
 	public String toString() {
 		return this.calculatetotalcost()+"$";
 	}
@@ -47,15 +48,15 @@ public class Cost {
 	}
 	
 	public double calculatetotalcost(){
-		double total_cost = 0;
-		total_cost = plan.getBasecost() + this.calculateoverflowtrafficcost() + this.calculateAddlineCost();
-		return total_cost;
+		double totalcost;
+		totalcost = plan.getBasecost() + this.calculateoverflowtrafficcost() + this.calculateAddlineCost();
+		return totalcost;
 	}
 	
 	public double calculateAddlineCost(){
 		int numofLine = getNumLine();
 		double addlineCost = plan.getAddLineCost();
-		double calculateCost = 0;
+		double calculateCost;
 		if (numofLine < 4)
 			calculateCost = addlineCost * (numofLine-1); 
 		else 
