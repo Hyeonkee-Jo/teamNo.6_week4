@@ -1,10 +1,9 @@
-package teemno6week4.bill;
+package teamsix;
+
 
 public class Cost {
 	
 	Plan plan;
-	static String GOLD = "GOLD";
-	static String SILVER = "SILVER";
 	int traffic;
 	int num;
 	
@@ -12,14 +11,17 @@ public class Cost {
 		
 		this.traffic = traffic;
 		this.num=num;
-		if(p.equals("S")){
-			plan = new SilverPlan();
-			System.out.println(this.calculatetotalcost()+"$");
+		if(("S").equals(p)){
+			plan = new SilverPlan();		
 		}
-		else if(p.equals("G")) {
+		else if(("G").equals(p)) {
 			plan = new GoldPlan();
-			System.out.println(this.calculatetotalcost()+"$");
 		}
+	}
+	
+	@Override
+	public String toString() {
+		return this.calculatetotalcost()+"$";
 	}
 	
 	public void setUsed(int userUsed) {
@@ -46,15 +48,15 @@ public class Cost {
 	}
 	
 	public double calculatetotalcost(){
-		double total_cost = 0;
-		total_cost = plan.getBasecost() + this.calculateoverflowtrafficcost() + this.calculateAddlineCost();
-		return total_cost;
+		double totalcost;
+		totalcost = plan.getBasecost() + this.calculateoverflowtrafficcost() + this.calculateAddlineCost();
+		return totalcost;
 	}
 	
 	public double calculateAddlineCost(){
 		int numofLine = getNumLine();
 		double addlineCost = plan.getAddLineCost();
-		double calculateCost = 0;
+		double calculateCost;
 		if (numofLine < 4)
 			calculateCost = addlineCost * (numofLine-1); 
 		else 

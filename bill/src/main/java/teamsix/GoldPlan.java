@@ -1,4 +1,4 @@
-package teemno6week4.bill;
+package teamsix;
 
 public class GoldPlan implements Plan{
 	double basecost;

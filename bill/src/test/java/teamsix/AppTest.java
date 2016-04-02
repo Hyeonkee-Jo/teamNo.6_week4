@@ -1,4 +1,4 @@
-package teemno6week4.bill;
+package teamsix;
 
 import junit.framework.Test;
 import junit.framework.TestCase;
