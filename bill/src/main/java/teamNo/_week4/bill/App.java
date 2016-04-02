@@ -8,11 +8,11 @@ public class App {
 		Cost cost = new Cost();
 
 		System.out.println("사용자의 Plan을 입력하세요 : [Gold : (g or G), Silver : (s or S)]");
-		String plan = scan.nextLine();
+		String plan = "s";
 		System.out.println("사용자의 Line개수를 입력하세요 : ");
-		int addline = scan.nextInt();
+		int addline = 5;
 		System.out.println("사용자의 총 통화량을 입력하세요 : ");
-		int traffic = scan.nextInt();
+		int traffic = 499;
 
 		if (plan.toUpperCase().equals("G")) {
 			cost.plan = new GoldPlan();
