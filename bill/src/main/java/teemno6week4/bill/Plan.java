@@ -2,19 +2,19 @@ package teemno6week4.bill;
 
 public interface Plan {
 		
-	public void setBasecost(double base_cost);
+	public void setBasecost(double basecost);
 	
 	public double getBasecost();
 	
-	public void setBaseTraffic(int base_traffic);
+	public void setBaseTraffic(int basetraffic);
 	
 	public int getBaseTraffic();
 	
-	public void setAddLineCost(double addline_cost);
+	public void setAddLineCost(double addlinecost);
 	
 	public double getAddLineCost();
 	
-	public void setOverflowTrafficCost(double overflow_traffic_cost);
+	public void setOverflowTrafficCost(double overflowtrafficcost);
 	
 	public double getOverflowTrafficCost();
 	
