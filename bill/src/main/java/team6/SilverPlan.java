@@ -1,4 +1,4 @@
-package teamno6bill;
+package team6;
 
 public class SilverPlan implements Plan {
 	double basecost;

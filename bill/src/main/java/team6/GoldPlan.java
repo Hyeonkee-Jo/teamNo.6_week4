@@ -1,4 +1,4 @@
-package teamno6bill;
+package team6;
 
 public class GoldPlan implements Plan{
 	double basecost;

@@ -1,4 +1,4 @@
-package teamno6bill;
+package team6;
 
 import junit.framework.Test;
 import junit.framework.TestCase;

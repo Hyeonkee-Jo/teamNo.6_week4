@@ -1,4 +1,4 @@
-package teamno6bill;
+package team6;
 
 public interface Plan {
 		
