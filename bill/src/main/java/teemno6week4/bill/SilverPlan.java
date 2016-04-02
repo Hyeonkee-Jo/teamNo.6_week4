@@ -1,4 +1,4 @@
-package teamNo._week4.bill;
+package teemno6week4.bill;
 
 public class SilverPlan implements Plan {
 	double base_cost;

@@ -1,4 +1,4 @@
-package teamNo._week4.bill;
+package teemno6week4.bill;
 
 public class Cost {
 	
@@ -12,6 +12,20 @@ public class Cost {
 		/*calculate_overflow_traffic_cost();
 		calculate_Addline_Cost();
 		calculate_total_cost();*/
+	}
+	
+	public Cost(String p,int minutes_used ,int num) {
+		
+		this.minutes_used = minutes_used;
+		this.num=num;
+		if(p.equals("S")){
+			plan = new SilverPlan();
+			System.out.println(this.calculate_total_cost()+"$");
+		}
+		else if(p.equals("G")) {
+			plan = new GoldPlan();
+			System.out.println(this.calculate_total_cost()+"$");
+		}
 	}
 	
 	public void setUsed(int userUsed) {
