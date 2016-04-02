@@ -5,35 +5,29 @@ public class Cost {
 	Plan plan;
 	static String GOLD = "GOLD";
 	static String SILVER = "SILVER";
-	int minutes_used;
+	int traffic;
 	int num;
 	
-	public Cost(){
-		/*calculate_overflow_traffic_cost();
-		calculate_Addline_Cost();
-		calculate_total_cost();*/
-	}
-	
-	public Cost(String p,int minutes_used ,int num) {
+	public Cost(String p,int traffic ,int num) {
 		
-		this.minutes_used = minutes_used;
+		this.traffic = traffic;
 		this.num=num;
 		if(p.equals("S")){
 			plan = new SilverPlan();
-			System.out.println(this.calculate_total_cost()+"$");
+			System.out.println(this.calculatetotalcost()+"$");
 		}
 		else if(p.equals("G")) {
 			plan = new GoldPlan();
-			System.out.println(this.calculate_total_cost()+"$");
+			System.out.println(this.calculatetotalcost()+"$");
 		}
 	}
 	
 	public void setUsed(int userUsed) {
-		this.minutes_used = userUsed;
+		this.traffic = userUsed;
 	}
 	
 	public int getUsed(){
-		return minutes_used;
+		return traffic;
 	}
 	
 	public void setNumLine(int num) {
@@ -43,30 +37,30 @@ public class Cost {
 		return num;
 	}
 	
-	public double calculate_overflow_traffic_cost(){
-		double expected_bill = 0;
-		if(minutes_used >= plan.getBaseTraffic())
-			expected_bill = plan.getOverflowTrafficCost()*(minutes_used-plan.getBaseTraffic());
+	public double calculateoverflowtrafficcost(){
+		double expectedBill = 0;
+		if(traffic >= plan.getBaseTraffic())
+			expectedBill = plan.getOverflowTrafficCost()*(traffic-plan.getBaseTraffic());
 	
-		return expected_bill;
+		return expectedBill;
 	}
 	
-	public double calculate_total_cost(){
+	public double calculatetotalcost(){
 		double total_cost = 0;
-		total_cost = plan.getBasecost() + this.calculate_overflow_traffic_cost() + this.calculate_Addline_Cost();
+		total_cost = plan.getBasecost() + this.calculateoverflowtrafficcost() + this.calculateAddlineCost();
 		return total_cost;
 	}
 	
-	public double calculate_Addline_Cost(){
-		int get_Number_Of_Line = getNumLine();
+	public double calculateAddlineCost(){
+		int numofLine = getNumLine();
 		double addlineCost = plan.getAddLineCost();
-		double calculate_cost = 0;
-		if (get_Number_Of_Line < 4)
-			calculate_cost = addlineCost * (get_Number_Of_Line-1); 
+		double calculateCost = 0;
+		if (numofLine < 4)
+			calculateCost = addlineCost * (numofLine-1); 
 		else 
-			calculate_cost = ( addlineCost * 2 ) + ( 5 * (get_Number_Of_Line-3) );
+			calculateCost = ( addlineCost * 2 ) + ( 5 * (numofLine-3) );
 				
-		return calculate_cost;
+		return calculateCost;
 	}
 
 }
