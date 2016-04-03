@@ -7,7 +7,7 @@ public class Cost {
 	int traffic;
 	int num;
 	
-	public Cost(String p,int traffic ,int num) {
+	public Cost(String p, int traffic , int num) {
 		
 		this.traffic = traffic;
 		this.num=num;
