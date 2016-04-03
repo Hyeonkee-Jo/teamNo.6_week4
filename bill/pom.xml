@@ -31,6 +31,7 @@
   </profiles>
 
   <build>
+        
     <resources>
       <resource>
         <directory>src/main/resources</directory>
@@ -42,14 +43,43 @@
     
     <plugins>
       <plugin>
-        <artifactId>maven-compiler-plugin</artifactId>
+      	<groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-jar-plugin</artifactId>
+            <version>2.5</version>
+        <!--<artifactId>maven-compiler-plugin</artifactId>-->
         <configuration>
-          <source>1.8</source>
-          <target>1.8</target>
+        	<finalName>${jar.name}</finalName>
+                <outputDirectory>${deploy.target.dir}</outputDirectory>
+                <archive>
+                    <manifest>
+                        <mainClass>teamsix.App</mainClass>
+                    
+                        <classpathPrefix>${lib.dir}/</classpathPrefix>
+                    </manifest>
+                </archive>
+          <!--  <source>1.8</source>
+          <target>1.8</target>-->
         </configuration>
       </plugin>
       <plugin>
-        <groupId>org.jacoco</groupId>
+      <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-dependency-plugin</artifactId>
+            <version>2.10</version>
+            <executions>
+                <execution>
+                    <id>copy-dependencies</id>
+                    <phase>package</phase>
+                    <goals>
+                        <goal>copy-dependencies</goal>
+                    </goals>
+                </execution>
+            </executions>
+            <configuration>
+                <outputDirectory>${deploy.target.dir}/${lib.dir}</outputDirectory>
+                <overWriteIfNewer>true</overWriteIfNewer>
+            </configuration>
+      
+       <!--  <groupId>org.jacoco</groupId>
         <artifactId>jacoco-maven-plugin</artifactId>
         <version>0.7.6.201602180812</version>
         <executions>
@@ -59,15 +89,18 @@
               <goal>prepare-agent</goal>
             </goals>
           </execution>
-        </executions>
+        </executions>-->
       </plugin>
    </plugins>
    
   </build>
   
   <properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <sonar.language>java</sonar.language>
+    <!--<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <sonar.language>java</sonar.language>-->
+    <deploy.target.dir>c:/myproject</deploy.target.dir>
+    <lib.dir>lib</lib.dir>
+    <jar.name>app</jar.name>
   </properties>
 
   <dependencies>
