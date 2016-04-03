@@ -2,7 +2,7 @@
 
 실전코딩 6조 4주차 과제 -전화요금 고지서 요금출력 프로그램
 
-#Input : 사용자의 플랜(Gold : G, Silver: S) / 사용자의 총 통화량 / 사용자의 라인개수
+#Input : 플랜(Gold : G, Silver: S) / 통화량 / 라인개수
 #Output : 사용 요금($)
 
 1. fork된 gitrepo를 clone해서 PC로 가져옵니다.
@@ -22,7 +22,18 @@
 
 7. 위 경로에서 [java -jar app.jar] 명령어를 입력합니다.
 
-8. 처음에는 plan을 입력해야 합니다 (S or G, 무조건 대문자로 입력을 하셔야 합니다.)
-9. 다음은 통화량을 입력을 합니다. (ex) 234)
-10. 마지막으로 회선 수를 입력을 합니다. (ex) 4)
+8. 처음에는 plan을 입력해야 합니다 (Silver: S or Gold : G, 무조건 대문자로 입력을 하셔야 합니다.)
+
+9. 다음은 통화량을 입력을 합니다. (ex.. 234)
+
+10. 마지막으로 회선 수를 입력을 합니다. (ex.. 4)
+
 11. 그 후 결과화면이 나오게 됩니다.
+
+
+- Jenkins workspace 설정
+
+sonar.ProjectKey=bill
+sonar.ProjectName=bill
+sonar.ProjectVersion=0.0.1
+sonar.Sources=bill
