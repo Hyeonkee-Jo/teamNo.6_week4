@@ -16,7 +16,7 @@ public class AppTest{
 		c = new Cost(null, 0, 0);
 	}
 	
-	private void set(String p, int traffic , int num){
+	public void set(String p, int traffic , int num){
 		c.traffic = traffic;
 		c.num = num;
 		if(("S").equals(p)){

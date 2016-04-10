@@ -35,6 +35,7 @@ public class Cost {
 	/*public void setNumLine(int num) {
 		this.num = num;
 	}*/
+	
 	public int getNumLine(){
 		return num;
 	}
