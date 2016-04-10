@@ -15,27 +15,27 @@ public class SilverPlan implements Plan {
 		this.overflowtrafficcost = 0.54;	
 	}
 	
-	public void setBasecost(double basecost)
+	/*public void setBasecost(double basecost)
 	{
 		this.basecost = basecost;
-	}
+	}*/
 	
 	public double getBasecost() {
 		return this.basecost;
 	}
 	
-	public void setBaseTraffic(int basetraffic)
+	/*public void setBaseTraffic(int basetraffic)
 	{
 		this.basetraffic = basetraffic;
-	}
+	}*/
 	
 	public int getBaseTraffic() {
 		return this.basetraffic;
 	}
 	
-	public void setAddLineCost(double addlinecost) {
+	/*public void setAddLineCost(double addlinecost) {
 		this.addlinecost = addlinecost;
-	}
+	}*/
 	
 	public String getGrade() {
 		return this.grade;
@@ -46,10 +46,10 @@ public class SilverPlan implements Plan {
 		return this.addlinecost;
 	}
 	
-	public void setOverflowTrafficCost(double overflowtrafficcost)
+	/*public void setOverflowTrafficCost(double overflowtrafficcost)
 	{
 		this.overflowtrafficcost = overflowtrafficcost;
-	}
+	}*/
 	
 	public double getOverflowTrafficCost() {
 		return this.overflowtrafficcost;
