@@ -16,40 +16,40 @@ public class GoldPlan implements Plan{
 		this.basetraffic = 1000;
 	}
 	
-	public void setBasecost(double basecost)
+	/*public void setBasecost(double basecost)
 	{
 		this.basecost = basecost;
-	}
+	}*/
 	
 	public double getBasecost()
 	{
 		return this.basecost;
 	}
 	
-	public void setAddLineCost(double addlinecost)
+	/*public void setAddLineCost(double addlinecost)
 	{
 		this.addlinecost = addlinecost;
-	}
+	}*/
 	
 	public double getAddLineCost()
 	{
 		return this.addlinecost;
 	}
 	
-	public void setOverflowTrafficCost(double overflowtrafficcost)
+	/*public void setOverflowTrafficCost(double overflowtrafficcost)
 	{
 		this.overflowtrafficcost = overflowtrafficcost;
-	}
+	}*/
 	
 	public double getOverflowTrafficCost()
 	{
 		return this.overflowtrafficcost;
 	}
 	
-	public void setBaseTraffic(int basetraffic)
+	/*public void setBaseTraffic(int basetraffic)
 	{
 		this.basetraffic = basetraffic;
-	}
+	}*/
 	
 	public int getBaseTraffic()
 	{
