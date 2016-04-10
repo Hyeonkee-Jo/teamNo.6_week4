@@ -32,4 +32,10 @@ public class AppTest{
 		set("G", 700, 1);
 		assertEquals("49.95$", c.toString());
 	}
+	
+	@Test
+	public void testGoldTwolineBelowThau() {
+		set("G", 700, 2);
+		assertEquals("64.45$", c.toString());
+	}
 }
