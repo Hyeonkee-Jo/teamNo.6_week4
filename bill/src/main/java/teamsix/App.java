@@ -1,6 +1,7 @@
 package teamsix;
 
 import java.util.logging.*;
+
 import java.util.Scanner;
 public class App {
 	

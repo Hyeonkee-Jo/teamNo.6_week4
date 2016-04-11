@@ -78,8 +78,9 @@
                 <outputDirectory>${deploy.target.dir}/${lib.dir}</outputDirectory>
                 <overWriteIfNewer>true</overWriteIfNewer>
             </configuration>
-      
-       <!--  <groupId>org.jacoco</groupId>
+      </plugin>
+      <plugin>
+      <groupId>org.jacoco</groupId>
         <artifactId>jacoco-maven-plugin</artifactId>
         <version>0.7.6.201602180812</version>
         <executions>
@@ -89,7 +90,7 @@
               <goal>prepare-agent</goal>
             </goals>
           </execution>
-        </executions>-->
+        </executions>
       </plugin>
       <plugin>
   		<groupId>org.jacoco</groupId>
